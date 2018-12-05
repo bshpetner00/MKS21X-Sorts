@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class selectionsort {
 	public static void swap(int[]ary, int f, int l) {
 		int temp = ary[f];
@@ -6,13 +7,13 @@ public class selectionsort {
 	}
 	public static void selectionsort(int [] ary) {
 		for (int i = 0; i < ary.length; i++) {
-			int low = i;
-			for (int j = 0; j < ary.length; j++) {
-				if (ary[j] < ary[low]) {
-					low = j;
+			int lowIndex = i;
+			for (int j = i; j < ary.length; j++) {
+				if (ary[j] < ary[lowIndex]) {
+					lowIndex = j;
 				}
 			}
-			swap(ary,low,i);
+			swap(ary,lowIndex,i);
 		}
 	}
 }

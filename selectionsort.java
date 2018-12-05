@@ -12,7 +12,7 @@ public class selectionsort {
 					low = j;
 				}
 			}
-			swap(ary,low,j);
+			swap(ary,low,i);
 		}
 	}
 }
